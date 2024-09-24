@@ -16,7 +16,7 @@ body {
     align-items: center;
 }
 .box-to-center-card.xmas {
-    background-image: url("images/860.jpeg");
+    background-image: url("../images/860.jpeg");
 }
 .card-box {
     width: 1000px;
@@ -66,38 +66,40 @@ body {
 .right-block {
     width: 750px;
     height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 }
-.right-block h1 {
-    text-align: center;
-    margin: 50px 0;
-    font-weight: 400;
-    letter-spacing: 0.1em;
+.type-writer {
+    width: 270px;
+    margin-top: 80px;
 }
-.right-block .achieve-img {
-    margin: 0 auto 20px;
-    color: #eee;
+.type-writer h1 {
+    font-size: 32px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .1em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .07em; /* Adjust as needed */
+    animation: 
+        typing 1.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+.intro {
     text-align: center;
+    margin-top: 80px;
     font-size: 24px;
-    padding-top: 80px;
-    width: 600px;
-    height: 200px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/gdad.jpg");
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
-}
-.right-block .achieve-img2 {
-    margin: 0 auto;
-    color: #eee;
-    text-align: center;
-    font-size: 24px;
-    padding-top: 80px;
-    width: 600px;
-    height: 200px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/c.png");
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
+    text-transform: uppercase;
+    line-height: 1.5em;
 }
 .bottom-block {
     height: 70px;
@@ -109,7 +111,7 @@ body {
     border: 1px solid #8d8d8d;
     position: relative;
     left: 690px;
-    top: -40px;
+    bottom: 20px;
 }
 .bottom-block button:hover {
     cursor: pointer;

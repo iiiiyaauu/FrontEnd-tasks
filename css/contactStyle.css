@@ -16,7 +16,7 @@ body {
     align-items: center;
 }
 .box-to-center-card.xmas {
-    background-image: url("images/860.jpeg");
+    background-image: url("../images/860.jpeg");
 }
 .card-box {
     width: 1000px;
